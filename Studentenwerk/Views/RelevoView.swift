@@ -13,7 +13,7 @@ struct RelevoView: View {
             Section("Relevo Mehrweg") {}.headerProminence(.increased)
                 .padding(.bottom, -50)
             
-            Section ("Derzeit geliehen") {
+            Section ("Derzeit geliehen \(Image(systemName: "tray.full.fill"))") {
                 HStack {
                     Text("\(Image(systemName: "hockey.puck")) Claus")
                     Text("max. bis Fr. 16.12.").font(.footnote)
@@ -23,24 +23,26 @@ struct RelevoView: View {
                     Text("\(Image(systemName: "hockey.puck")) Maraike")
                     Text("max. bis Do. 22.12.").font(.footnote)
                 }
-                
+            }
+            
+            Section("Ausleihe und Rückgabe \(Image(systemName: "qrcode"))") {
                 Button {
                         print("Buttonpress.")
                     } label: {
-                        Text("Ausleihen")
+                        Text("Ausleihen \(Image(systemName: "square.and.arrow.up"))")
                     }
                 
                 Button {
                         print("Buttonpress.")
                     } label: {
-                        Text("Zurückgeben").foregroundColor(.indigo)
+                        Text("Zurückgeben \(Image(systemName: "arrow.triangle.2.circlepath"))").foregroundColor(.indigo)
                     }
             }
             
+            
             Section(content: {
-                Text("Bisher mit  \(Image(systemName: "leaf.fill")) \(Text("17").bold()) Relevos nachhaltig take-awayed!")
+                Text("Du hast bisher mit  \(Image(systemName: "leaf.fill")) \(Text("17").bold()) Relevos nachhaltig take-awayed!")
             }, header: {
-                Text("Zurückgegeben")
             }, footer: {
                 Image("relevo-banner")
                     .renderingMode(.template)
@@ -48,8 +50,8 @@ struct RelevoView: View {
                     .scaledToFit()
                     .padding(.top, 25)
                     .padding(.horizontal, 100)
-                    .foregroundColor(.gray)
-                    .opacity(0.25)
+                    .foregroundColor(Color("banner"))
+                    .opacity(0.2)
             })
             
         }

@@ -123,6 +123,8 @@
 			dependencies = (
 			);
 			name = Studentenwerk;
+			packageProductDependencies = (
+			);
 			productName = Studentenwerk;
 			productReference = 89D1CA7A2936087A00639065 /* Studentenwerk.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +153,8 @@
 				Base,
 			);
 			mainGroup = 89D1CA712936087A00639065;
+			packageReferences = (
+			);
 			productRefGroup = 89D1CA7B2936087A00639065 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

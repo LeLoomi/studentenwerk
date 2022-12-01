@@ -20,7 +20,7 @@ struct MealsView: View {
                     
                     HStack {
                         TextField(text: $searchInput) {
-                            Text("Mensa suchen")
+                            Text("\(Image(systemName: "magnifyingglass")) Mensa suchen")
                         }
                         Image(systemName: "arrow.up.arrow.down").foregroundColor(.accentColor)
                     }
@@ -61,7 +61,7 @@ struct MealsView: View {
                         CafeteriaTile(data: SWCafeteria(name: "Mensa Brühl", imageURL: "https://static.studentenwerk-dresden.de/mensen/mensen-cafeterien-aussenansichten/mensa-bruehl.jpg", adressSimple: "Brühlsche Terrasse 1", adressExtender: "01067 Dresden"), distance: 660, isPinned: false)
                     }
                 }
-            }.foregroundColor(.primary)
+            }.foregroundColor(.primary).listStyle(.plain)
         }
     }
 }
