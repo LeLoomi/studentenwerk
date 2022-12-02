@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
     @State var usernameInput = ""
     @State var passwordInput = ""
-    
+
     var body: some View {
         List {
             Section("Einstellungen") {}.headerProminence(.increased).padding(.bottom, -50)
-            
+
             Section {
                 HStack {
                     Image(systemName: "numbersign")
@@ -23,7 +22,7 @@ struct SettingsView: View {
                         Text("Kartennummer")
                     }
                 }
-                                
+
                 HStack {
                     Image(systemName: "key.horizontal").padding(.leading, -3).padding(.trailing, -2)
                     SecureField(text: $passwordInput) {
@@ -37,7 +36,7 @@ struct SettingsView: View {
             } footer: {
                 Text("Dein Login werden lokal gespeichert.")
             }
-            
+
             Section {
                 HStack {
                     Text("Lastschrift")
@@ -45,7 +44,7 @@ struct SettingsView: View {
                     Text("zum hinzufügen tippen").foregroundColor(.gray).italic().font(.footnote)
                     Image(systemName: "checkmark.circle").foregroundColor(.gray)
                 }
-                
+
                 HStack {
                     Text("PayPal")
                     Spacer()
@@ -57,8 +56,8 @@ struct SettingsView: View {
             } footer: {
                 Text("Deine Daten werden sicher lokal gespeichert.")
             }
-            
-            //Logo footer
+
+            // Logo footer
             Section {} header: {} footer: {
                 VStack {
                     Image("swdd-banner")

@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct CafeteriaTile: View {
-    
-    let data:SWCafeteria
-    let distance:Int
-    let isPinned:Bool
-    
-    init(data:SWCafeteria, distance:Int, isPinned:Bool) {
+    let data: SWCafeteria
+    let distance: Int
+    let isPinned: Bool
+
+    init(data: SWCafeteria, distance: Int, isPinned: Bool) {
         self.data = data
         self.distance = distance
         self.isPinned = isPinned
     }
-    
+
     var body: some View {
         HStack {
             AsyncImage(url: data.imageURL) { image in
@@ -28,7 +27,7 @@ struct CafeteriaTile: View {
             } placeholder: {
                 ProgressView()
             }.frame(width: 120)
-            
+
             VStack(alignment: .leading, content: {
                 Text(data.name).font(.headline)
                 Text(data.adressSimple).font(.caption2)
@@ -39,7 +38,7 @@ struct CafeteriaTile: View {
             .padding(.vertical, 5)
             .cornerRadius(10)
             .overlay {
-                if(isPinned) {
+                if isPinned {
                     VStack {
                         HStack {
                             Image(systemName: "pin.fill").foregroundColor(.accentColor).shadow(radius: 10)

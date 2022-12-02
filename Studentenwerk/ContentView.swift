@@ -11,18 +11,18 @@ struct ContentView: View {
     var body: some View {
         TabView {
             MealsView()
-                .tabItem{
+                .tabItem {
                     VStack {
                         Image(systemName: "takeoutbag.and.cup.and.straw")
                         Text("Speiseplan")
                     }
                 }
-            
+
             RelevoView()
                 .tabItem {
                     Label("Relevo", systemImage: "leaf.fill")
                 }
-            
+
             VoteView()
                 .tabItem {
                     VStack {
@@ -30,15 +30,15 @@ struct ContentView: View {
                         Text("VoteMensa")
                     }
                 }
-            
+
             CardView()
-                .tabItem{
+                .tabItem {
                     VStack {
                         Image(systemName: "creditcard")
                         Text("Mensakarte")
                     }
                 }
-            
+
             SettingsView()
                 .tabItem {
                     VStack {
