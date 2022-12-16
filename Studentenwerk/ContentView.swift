@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            MealsView()
+            CafeteriasView()
                 .tabItem {
                     VStack {
                         Image(systemName: "takeoutbag.and.cup.and.straw")
@@ -27,7 +27,7 @@ struct ContentView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "star.bubble.fill")
-                        Text("VoteMensa")
+                        Text("#VoteMensa")
                     }
                 }
 

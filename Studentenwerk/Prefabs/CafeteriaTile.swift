@@ -41,7 +41,10 @@ struct CafeteriaTile: View {
                 if isPinned {
                     VStack {
                         HStack {
-                            Image(systemName: "pin.fill").foregroundColor(.accentColor).shadow(radius: 10)
+                            Image(systemName: "pin.fill")
+                                .foregroundColor(.accentColor)
+                                .rotationEffect(Angle(degrees: -10))
+                                .shadow(radius: 20)
                             Spacer()
                         }
                         Spacer()

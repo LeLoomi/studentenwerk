@@ -9,7 +9,14 @@ import SwiftUI
 
 struct VoteView: View {
     var body: some View {
-        Text("Whatcha wanna eat? #VoteMensa")
+        List {
+            Section("#VoteMensa") {}.headerProminence(.increased)
+                .padding(.bottom, -50)
+            
+            VoteTile(dishName: "Currywurst und Steakfries", dishImageURL: "https://bilderspeiseplan.studentenwerk-dresden.de/m32/202212/278283.jpg", hasMeat: true, hasFish: false, hasAlcohol: false, isVegan: false, voteIndex: 1)
+            VoteTile(dishName: "Türkische Linsenlaibchen mit Tomatenragout", dishImageURL: "https://bilderspeiseplan.studentenwerk-dresden.de/m32/202212/278282.jpg", hasMeat: false, hasFish: false, hasAlcohol: false, isVegan: true, voteIndex: 0)
+            VoteTile(dishName: "Seelachs im Backteig mit Kartoffelpüree", dishImageURL: "https://bilderspeiseplan.studentenwerk-dresden.de/m7/202212/277878.jpg", hasMeat: false, hasFish: true, hasAlcohol: false, isVegan: false, voteIndex: -1)
+        }
     }
 }
 
