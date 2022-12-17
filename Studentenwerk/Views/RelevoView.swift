@@ -15,12 +15,12 @@ struct RelevoView: View {
 
             Section("Derzeit geliehen \(Image(systemName: "tray.full.fill"))") {
                 HStack {
-                    Text("\(Image(systemName: "hockey.puck")) Claus")
+                    Text("\(Image(systemName: "hockey.puck")) Carl")
                     Text("max. bis Fr. 16.12.").font(.footnote)
                 }
 
                 HStack {
-                    Text("\(Image(systemName: "hockey.puck")) Maraike")
+                    Text("\(Image(systemName: "hockey.puck")) Amilio")
                     Text("max. bis Do. 22.12.").font(.footnote)
                 }
             }

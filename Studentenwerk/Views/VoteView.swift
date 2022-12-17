@@ -12,7 +12,7 @@ struct VoteView: View {
         List {
             Section {} header: {
                 Text("#VoteMensa").headerProminence(.increased)
-            } footer: { Text("Sag uns, was dir gut geschmecht hat und was nicht!") }
+            } footer: { Text("Sag uns, was dir gut geschmeckt hat und was nicht!") }
                 .padding(.bottom, -20)
 
             
